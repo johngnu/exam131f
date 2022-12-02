@@ -12,7 +12,7 @@ public class Main {
         c1.adicionar(new Vivienda(3, "Alcantarillado", "Empresa electrica", "gas de garrafa", "contenedor", "radio"));
         c1.adicionar(new Vivienda(4, "Alcantarillado", "motor propio", "Leña", "Terreno baldio", "radio"));
 
-        c1.mostrar();
+        //c1.mostrar();
 
         CSimpleV c2 = new CSimpleV();
         c2.adicionar(new Vivienda(3, "si", "panel solar", "gas de garrafa", "si", "televisor"));
@@ -59,7 +59,7 @@ public class Main {
 
         a.niveles();
 
-        solucionA(m1, "leña");
+        //solucionA(m1, "leña");
 
     }
 

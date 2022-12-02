@@ -5,6 +5,11 @@ public class ComunidadRural {
     private String nomComunidad;
     private CSimpleV c;
 
+    public void mostrar() {
+        System.out.println("Com: " + nomComunidad);
+        c.mostrar();
+    }
+    
     public ComunidadRural(String nomComunidad, CSimpleV c) {
         this.nomComunidad = nomComunidad;
         this.c = c;
