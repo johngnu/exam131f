@@ -57,10 +57,10 @@ public class Main {
         ArbolM a = new ArbolM();
         a.setRaiz(m1);
 
-        //a.niveles();
+        a.niveles();
 
         // 
-        solucionA(m1, "panel solar");
+        //solucionA(m1, "panel solar");
 
     }
 
