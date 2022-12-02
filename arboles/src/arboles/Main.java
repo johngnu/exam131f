@@ -57,9 +57,10 @@ public class Main {
         ArbolM a = new ArbolM();
         a.setRaiz(m1);
 
-        a.niveles();
+        //a.niveles();
 
-        solucionA(m1, "leña");
+        // 
+        solucionA(m1, "panel solar");
 
     }
 
@@ -72,19 +73,47 @@ public class Main {
         while (!nivel.esvacia()) {//paso de nivel
             while (!nivel.esvacia()) {
                 NodoM r = nivel.eliminar();
-                /*if (r.getQ().getNota() == may) {
-                    c++;
+                System.out.println("Muni: " + r.getM().getMunicipio());
+                int cn = 0;                
+                for(ComunidadRural cr : r.getM().getCr()) {
+                    Vivienda elem;
+                    CSimpleV aux = cr.getC();
+                    while (!cr.getC().esvacia()) {
+                        elem = cr.getC().eliminar();
+                        aux.adicionar(elem);
+                        if(elem.getTipoEnergia().endsWith(x)) {
+                            cn++;
+                        }
+                    }
+                    cr.getC().vaciar(aux);
                 }
+                System.out.println("Comunidades La cantidad es: " + cn);
+                
+                cn = 0; 
+                for(ComunidadRural cr : r.getM().getCr()) {
+                    Vivienda elem;
+                    CSimpleV aux = cr.getC();
+                    while (!cr.getC().esvacia()) {
+                        elem = cr.getC().eliminar();
+                        aux.adicionar(elem);
+                        if(elem.getTipoEnergia().endsWith(x)) {
+                            cn++;
+                        }
+                    }
+                    cr.getC().vaciar(aux);
+                }
+                System.out.println("Zonas La cantidad es: " + cn);
+                
                 if (r.getIzq() != null) {
                     desc.adicionar(r.getIzq());
                 }
                 if (r.getDer() != null) {
                     desc.adicionar(r.getDer());
-                }*/
+                }
             }
             nivel.vaciar(desc);
         }
-        System.out.println("La cantidad de estudiantes que tienen la mejor onoota es: " + c);
+        
     }
 
 }
