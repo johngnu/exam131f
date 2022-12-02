@@ -60,7 +60,7 @@ public class Main {
         a.niveles();
 
         // 
-        //solucionA(m1, "panel solar");
+        solucionA(m1, "panel solar");
 
     }
 
@@ -77,7 +77,7 @@ public class Main {
                 int cn = 0;                
                 for(ComunidadRural cr : r.getM().getCr()) {
                     Vivienda elem;
-                    CSimpleV aux = cr.getC();
+                    CSimpleV aux = new CSimpleV();
                     while (!cr.getC().esvacia()) {
                         elem = cr.getC().eliminar();
                         aux.adicionar(elem);
@@ -90,9 +90,9 @@ public class Main {
                 System.out.println("Comunidades La cantidad es: " + cn);
                 
                 cn = 0; 
-                for(ComunidadRural cr : r.getM().getCr()) {
+                for(ZonaUrbana cr : r.getM().getZu()) {
                     Vivienda elem;
-                    CSimpleV aux = cr.getC();
+                    CSimpleV aux = new CSimpleV();
                     while (!cr.getC().esvacia()) {
                         elem = cr.getC().eliminar();
                         aux.adicionar(elem);
