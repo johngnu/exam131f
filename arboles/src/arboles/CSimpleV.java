@@ -56,7 +56,7 @@ public class CSimpleV {
         if (esvacia()) {
             System.out.println("Cola vacia");
         } else {
-            System.out.println("Datos de la Cola ESCENARIOS: ");
+            System.out.println("Datos de la Cola VIVIENDAS: ");
             CSimpleV aux = new CSimpleV();
             while (!esvacia()) {
                 elem = eliminar();
