@@ -59,7 +59,7 @@ public class Main {
 
         a.niveles();
 
-        //solucionA(m1, "leña");
+        solucionA(m1, "leña");
 
     }
 

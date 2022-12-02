@@ -15,7 +15,7 @@ public class Vivienda {
     }
 
     public void mostrar() {
-        System.out.println("nro: " + nroPropiedad + ", SS: " + servicioSanitario + ", TE: " + ", UC:" + usaCocinar + ", EB: " + eliminaBasura + ", Com: " + comunicacion);
+        System.out.println("nro: " + nroPropiedad + ", SS: " + servicioSanitario + ", TE: " + tipoEnergia + ", UC:" + usaCocinar + ", EB: " + eliminaBasura + ", Com: " + comunicacion);
     }
 
     public int getNroPropiedad() {
