@@ -49,7 +49,14 @@ public class Municipio {
 
     public void mostrar() {
         System.out.println("Depto: " + departamento + ", Muni: " + municipio);
-        
+        System.out.println("* Comunidades");
+        for (ComunidadRural c : cr) {
+            c.mostrar();
+        }
+        System.out.println("* Zonas urvanas");
+        for (ZonaUrbana z : zu) {
+            z.mostrar();
+        }
     }
 
 }

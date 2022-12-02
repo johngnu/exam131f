@@ -26,4 +26,8 @@ public class ZonaUrbana {
         this.c = c;
     }
 
+    public void mostrar() {
+        System.out.println("Zona: " + nomZona);
+        c.mostrar();
+    }
 }
