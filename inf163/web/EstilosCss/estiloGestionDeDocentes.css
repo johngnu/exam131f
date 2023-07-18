@@ -1,0 +1,81 @@
+header {
+  background-color: #002f6c;
+  color: white;
+  padding: 20px;
+}
+
+/* Estilos para el menú */
+nav {
+  background-color: #4CAF50;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  background-color: #3e8e41;
+}
+
+/* Estilos para la tabla */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #002f6c;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para el formulario */
+form {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #002f6c;
+}
+
+button[type=submit] {
+  background-color: #002f6c;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type=submit]:hover {
+  background-color: #001a40;
+}

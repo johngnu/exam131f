@@ -1,0 +1,64 @@
+body {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0px 12px;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Estilos para el menú */
+nav {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+nav a {
+  color: #333;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #666;
+}
+
+/* Estilos para la tabla de notas */
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #eee;
+}
+
+/* Estilos para los botones */
+button {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #666;
+}

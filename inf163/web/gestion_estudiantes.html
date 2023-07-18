@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  	<html lang="es">
+  	<head>
+    	<meta charset="UTF-8">
+    	<link rel="stylesheet" href="EstilosCss/estiloGestionDeEstudiantes.css">
+    	<title>Menu</title>
+	</head>
+	<body>
+		<h1>Gestión de estudiantes</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Número de identificación</th>
+					<th>Carrera</th>
+					<th>Fecha de nacimiento</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>John Doe</td>
+					<td>1234567</td>
+					<td>Ingeniería en Sistemas</td>
+					<td>01/01/2000</td>
+					<td>
+						<button>Editar</button>
+						<button>Eliminar</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Jane Smith</td>
+					<td>9876543</td>
+					<td>Arquitectura</td>
+					<td>05/05/1999</td>
+					<td>
+						<button>Editar</button>
+						<button>Eliminar</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<form>
+			<label>Nombre:</label>
+			<input type="text" name="nombre" required>
+	
+			<label>Número de identificación:</label>
+			<input type="number" name="identificacion" required>
+	
+			<label>Fecha de nacimiento:</label>
+			<input type="date" name="fecha_nacimiento" required>
+	
+			<button type="submit" class="btn_AE">Agregar estudiante</button>
+		</form>
+	</body>
+</html>

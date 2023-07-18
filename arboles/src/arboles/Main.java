@@ -13,7 +13,6 @@ public class Main {
         c1.adicionar(new Vivienda(4, "Alcantarillado", "motor propio", "Leña", "Terreno baldio", "radio"));
 
         //c1.mostrar();
-
         CSimpleV c2 = new CSimpleV();
         c2.adicionar(new Vivienda(3, "si", "panel solar", "gas de garrafa", "si", "televisor"));
         c2.adicionar(new Vivienda(4, "si", "motor propio", "leña", "si", "computadora"));
@@ -59,12 +58,12 @@ public class Main {
 
         a.niveles();
 
-        // 
-        solucionA(m1, "panel solar");
+        // B
+        solucionB(m1, "panel solar");
 
     }
 
-    public static void solucionA(NodoM a, String x) {
+    public static void solucionB(NodoM a, String x) {
         PilaM nivel = new PilaM();
         PilaM desc = new PilaM();
         nivel.adicionar(a);
@@ -74,36 +73,36 @@ public class Main {
             while (!nivel.esvacia()) {
                 NodoM r = nivel.eliminar();
                 System.out.println("Muni: " + r.getM().getMunicipio());
-                int cn = 0;                
-                for(ComunidadRural cr : r.getM().getCr()) {
+                int cn = 0;
+                for (ComunidadRural cr : r.getM().getCr()) {
                     Vivienda elem;
                     CSimpleV aux = new CSimpleV();
                     while (!cr.getC().esvacia()) {
                         elem = cr.getC().eliminar();
                         aux.adicionar(elem);
-                        if(elem.getTipoEnergia().endsWith(x)) {
+                        if (elem.getTipoEnergia().endsWith(x)) {
                             cn++;
                         }
                     }
                     cr.getC().vaciar(aux);
                 }
                 System.out.println("Comunidades La cantidad es: " + cn);
-                
-                cn = 0; 
-                for(ZonaUrbana cr : r.getM().getZu()) {
+
+                cn = 0;
+                for (ZonaUrbana cr : r.getM().getZu()) {
                     Vivienda elem;
                     CSimpleV aux = new CSimpleV();
                     while (!cr.getC().esvacia()) {
                         elem = cr.getC().eliminar();
                         aux.adicionar(elem);
-                        if(elem.getTipoEnergia().endsWith(x)) {
+                        if (elem.getTipoEnergia().endsWith(x)) {
                             cn++;
                         }
                     }
                     cr.getC().vaciar(aux);
                 }
                 System.out.println("Zonas La cantidad es: " + cn);
-                
+
                 if (r.getIzq() != null) {
                     desc.adicionar(r.getIzq());
                 }
@@ -113,7 +112,7 @@ public class Main {
             }
             nivel.vaciar(desc);
         }
-        
+
     }
 
 }
