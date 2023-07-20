@@ -2,15 +2,13 @@ package inf154;
 
 import java.util.*;
 
-/*
+/*  Ejemplos de cadenas:
+   
     +55000 -5000
     -895.6 +451.1 15151 777e -e +e
-    _ $ a1 asd 123 as32
     = += -= *= /= %= **= <<= >>= >>>= &= ^= |=
     a 4e 4ee 5.6 -5.6e int double string main extends asdfasd lll okui a 4e $ _ 6.5 -968 -e = += -= *=
     /= %= **= <<= >>= >>>= &= ^= |=
-    a* gg= .=
-    5ass5d552233.==
  */
 public class Inf154 {
 
@@ -43,7 +41,6 @@ public class Inf154 {
                 }
             }
         }
-        // operadoresAsignacion();
     }
 
     public static Estado reconocerNumero(String cadena) {
@@ -303,6 +300,72 @@ public class Inf154 {
                 i++;
             }
             if (estado == 8) {
+                sw = true;
+            } else if (estado == -1) {
+                sw = false;
+            }
+        }
+        
+        if (x.equals("public")) {
+            int nt[][] = new int[10][10];
+            nt[0][0] = 1;
+            nt[1][1] = 2;
+            nt[2][2] = 3;
+            nt[3][3] = 4;
+            nt[4][4] = 5;
+            nt[5][5] = 6;
+            int estado = 0;
+            int i = 0, simbolo;
+            while (estado != 6 && estado != 5 && estado != -1 && i < x.length()) {
+                simbolo = convPublic(x.charAt(i));
+                estado = nt[estado][simbolo];
+                i++;
+            }
+            if (estado == 5) {
+                sw = true;
+            } else if (estado == -1) {
+                sw = false;
+            }
+        }
+        
+        if (x.equals("float")) {
+            int nt[][] = new int[10][10];
+            nt[0][0] = 1;
+            nt[1][1] = 2;
+            nt[2][2] = 3;
+            nt[3][3] = 4;
+            nt[4][4] = 5;
+            int estado = 0;
+            int i = 0, simbolo;
+            while (estado != 5 && estado != 4 && estado != -1 && i < x.length()) {
+                simbolo = convFloat(x.charAt(i));
+                estado = nt[estado][simbolo];
+                i++;
+            }
+            if (estado == 4) {
+                sw = true;
+            } else if (estado == -1) {
+                sw = false;
+            }
+        }
+        
+        if (x.equals("default")) {
+            int nt[][] = new int[10][10];
+            nt[0][0] = 1;
+            nt[1][1] = 2;
+            nt[2][2] = 3;
+            nt[3][3] = 4;
+            nt[4][4] = 5;
+            nt[5][5] = 6;
+            nt[6][3] = 7;
+            int estado = 0;
+            int i = 0, simbolo;
+            while (estado != 7 && estado != 6 && estado != -1 && i < x.length()) {
+                simbolo = convDefault(x.charAt(i));
+                estado = nt[estado][simbolo];
+                i++;
+            }
+            if (estado == 6) {
                 sw = true;
             } else if (estado == -1) {
                 sw = false;
